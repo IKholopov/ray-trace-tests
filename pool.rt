@@ -9,8 +9,8 @@ endviewport
 
 lights
 	point
-		power 50
-		position -5 2 5
+		coords -5 2 5
+        power 50
 	endpoint
 endlights
 

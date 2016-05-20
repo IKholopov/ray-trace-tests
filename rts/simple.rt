@@ -1,0 +1,92 @@
+viewport
+    origin 0 0 0                # Положение глаза наблюдателя
+    topleft -500 1000 500       # Верхний-левый угол экрана
+    bottomleft -500 1000 -500   # Нижний-левый угол экрана
+    topright 500 1000 500       # Верхний-правый угол экрана
+endviewport
+
+materials
+    entry
+        name red            # Имя
+        color 255 0 0       # Цвет поверхности
+    endentry
+    entry
+        name green          # Имя
+        color 0 255 0       # Цвет поверхности
+    endentry
+    entry
+        name blue           # Имя
+        color 0 0 255       # Цвет поверхности
+    endentry
+    entry
+        name yellow         # Имя
+        color 255 255 0     # Цвет поверхности
+    endentry
+endmaterials
+
+lights
+    # Описание нормировочных коэффициентов
+    reference
+        # Мощность эталонного источника
+        power 1
+        # Расстояние от него до эталонной плоскости
+        distance 250
+    endreference
+    # Описание одного источника света
+    point
+        coords 300 1000 0        # Координаты
+        power 1          # Мощность
+    endpoint
+    point
+        coords 0 1000 300        # Координаты
+        power 1            # Мощность
+    endpoint
+    point
+        coords 300 1000 300        # Координаты
+        power 1            # Мощность
+    endpoint
+    point
+        coords -300 1000 0        # Координаты
+        power 1                   # Мощность
+    endpoint
+    point
+        coords 0 1000 -300          # Координаты
+        power 1                    # Мощность
+    endpoint
+    point
+        coords -300 1000 -300      # Координаты
+        power 1                  # Мощность
+    endpoint
+endlights
+
+# Описание примитивов
+geometry
+    sphere
+        coords 300 1500 0
+        radius 100
+        material red
+    endsphere
+    sphere
+        coords 0 1500 300
+        radius 100
+        material green
+    endsphere
+    sphere
+        coords 300 1500 300
+        radius 100
+        material blue
+    endsphere
+
+    triangle
+        vertex -900 2000 -900
+        vertex 900 2300 -900
+        vertex 900 2000 900
+        material green
+    endtriangle
+    triangle
+        vertex -900 2000 -900
+        vertex -900 2300 900
+        vertex 900 2000 900
+        material yellow
+    endtriangle
+endgeometry

@@ -41,7 +41,7 @@ geometry
 		material wall
 	endquadrangle
 	sphere
-		center -0.3 0 0
+		coords -0.3 0 0
 		radius 0.5
 		material red
 	endsphere

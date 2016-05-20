@@ -51,7 +51,7 @@ endlights
 
 geometry
 sphere
-	center 0 0 0.5
+	coords 0 0 0.5
 	radius 0.75
 	material glass
 endsphere
